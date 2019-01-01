@@ -11,3 +11,13 @@ l1:
   blt x13, x11, l1        // if ( x13 < x11 ) 
   mv x10, x14             // x10 = x14 (x10 dönüş değeri)
   ret
+
+
+
+// c de karşılığı ;
+// 
+// int x10[N];            // N = x11
+// int i, sum=0;          // i = x13, sum = x14
+// for (i=0; i<N; i++){  
+//   sum += x10[i];
+// }
