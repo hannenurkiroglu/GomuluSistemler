@@ -1,13 +1,13 @@
 .global sum
 sum:
-  mv x12, x10
-  mv x13, x0
-  mv x14, x0
+  mv x12, x10             // x12 = x10 (x10=function argument)
+  mv x13, x0              // x13 = 0
+  mv x14, x0              // x14 = 0
 l1:
-  lw x15, (x12)
-  add x14, x14, x15
-  addi x12, x12, 4
-  addi x13, x13, 1
-  blt x13, x11, l1
-  mv x10, x14
+  lw x15, (x12)           // x15 = x12 ( () ile dizinin elemanını okunuyor) lw = load word (w değerin int old. söylüyor)
+  add x14, x14, x15       // x14 = x14 + x15
+  addi x12, x12, 4        // x12 = x12 + 4 (int değer old. için + 4)
+  addi x13, x13, 1        // x13 = x13 + 1
+  blt x13, x11, l1        // if ( x13 < x11 ) 
+  mv x10, x14             // x10 = x14 (x10 dönüş değeri)
   ret
