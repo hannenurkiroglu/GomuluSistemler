@@ -4,7 +4,7 @@ sum:
   mv x13, x0              // x13 = 0
   mv x14, x0              // x14 = 0
 l1:
-  lw x15, (x12)           // x15 = x12 ( () ile dizinin elemanını okunuyor) lw = load word (w değerin int old. söylüyor)
+  lw x15, (x12)           // x15 = bellekte x12 adresindeki deger, lw = load word (w değerin int old. söylüyor)
   add x14, x14, x15       // x14 = x14 + x15
   addi x12, x12, 4        // x12 = x12 + 4 (int değer old. için + 4)
   addi x13, x13, 1        // x13 = x13 + 1
