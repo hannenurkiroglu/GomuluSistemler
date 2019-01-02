@@ -7,3 +7,7 @@ int main(void){
   printf("%d\n", gcd2(a,b));
   return 0;
 }
+
+
+// gcc gcd2.S gcd2.c -o gcd
+// ./gcd
